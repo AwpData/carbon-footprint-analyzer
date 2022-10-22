@@ -9,7 +9,13 @@ public class Daily{
         dailyLog.add(0,KMDriven());
     }
 
-    public static int KMDriven(int KM) {
+    public static int KMDriven(int KM, int totalCarbonEmission, boolean done) {
+        if(done) {
+            return totalCarbonEmission;
+        } else {
+            totalCarbonEmission = totalCarbonEmission + KM;
+
+        }
 
     }
 
