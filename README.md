@@ -4,15 +4,15 @@
 
 ## What does our app do?
 - Tracks carbon footprint in daily life 
-- Miles driven
-- Transportation
-- Food 
-- Shower and how long it took
-- Waste (Compost, landfill, recycling)
+    - Miles driven
+    - Transportation
+    - Food 
+    - Shower and how long it took
+    - Waste (Compost, landfill, recycling)
 
 
 ## Back-end
-- Created two classes for weekly and daily logs 
+- Create two classes for weekly and daily logs 
 - Daily logs will store specific statisics of carbon emission 
 
 ## UI
