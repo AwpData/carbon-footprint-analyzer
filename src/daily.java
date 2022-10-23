@@ -30,13 +30,10 @@ public class Daily{
     *         boolean done - true when final vechile is added
     *  Output: An integer with the total carbon emission of all vechiles 
     ***************************************************/
-    public static int KMDriven(int KM, int totalCarbonEmission, boolean done) {
-        if(done) {
-            return totalCarbonEmission;
-        } else {
-            totalCarbonEmission = totalCarbonEmission + KM;
-
-        }
+    public static int KMDriven(int KM, String vehicle) {
+        boolean done = false;
+        int totalCarbonEmission = 0;
+        KMHelper(KM, totalCarbonEmission, done, vehicle);
 
     }
 
@@ -46,7 +43,18 @@ public class Daily{
     *         boolean done - true when final vechile is added
     *  Output: An integer with the total carbon emission of all vechiles 
     ***************************************************/
-
+    private int KMHelper(int KM, int totalCarbonEmission, boolean done, String vehicle) {
+        if(done) {
+            return totalCarbonEmission;
+        } else {
+            // API is used for this section
+            totalCarbonEmission = totalCarbonEmission + KM(vehicle);
+            // user input for next vehicle and new KM, idk know how it works with connections to moblie interface
+            KM = 5;
+            vehicle = "";
+            KMHelper(KM, totalCarbonEmission, done, vehicle);
+        }
+    }
     /***************************************************
     *  Purpose: Calculate total emission based on total water used
     *  Input: int totalWaterUsed - users total water usage for that day
